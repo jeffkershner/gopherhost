@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="banner">
+    <a href="mailto:contact@gopherhost.com">
+      <svg width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9 20.42l-6.21-6.21l2.83-2.83L9 14.77l9.88-9.89l2.83 2.83L9 20.42Z"/></svg> contact@gopherhost.com</a
+    >
+    <a href="https://account.gopherhost.com/login" class="btn">Login</a>
+  </div>
+</div>
+
+<style>
+  .container {
+    background-color: var(--clr-blue);
+  }
+
+  .banner {
+    max-inline-size: var(--container-inline-size);
+    margin-inline: auto;
+    padding: var(--small-gap) var(--gap);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--smaller-gap);
+    color: white;
+    font-weight: 600;
+    font-size: var(--font-size-0);
+    text-decoration: none;
+  }
+
+  .btn {
+    border-radius: 0.25rem;
+    padding: var(--smaller-gap) var(--small-gap);
+    border: 1px solid white;
+  }
+</style>

@@ -1,0 +1,15 @@
+:root {
+  --smaller-gap: calc(var(--gap) / 4);
+  --small-gap: calc(var(--gap) / 2);
+  --gap: 1rem;
+  --large-gap: calc(var(--gap) * 2);
+  --larger-gap: calc(var(--gap) * 4);
+  --primary-family: "Poppins", sans-serif;
+  --clr-red: #ff3f3f;
+  --clr-green: #2ebf6d;
+  --clr-orange: #ff7c3f;
+  --clr-blue: #0065ff;
+  --clr-teal: #5bc0de;
+  --accent-color: #1192f8;
+  --container-inline-size: 1080px;
+}

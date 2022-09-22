@@ -1,0 +1,41 @@
+---
+import PricingCard from "@components/PricingCard.astro";
+import plan1Img from "@assets/images/home-banner-plan-box-img-1.png";
+import plan2Img from "@assets/images/home-banner-plan-box-img-2.png";
+---
+
+<section class="pricing">
+  <PricingCard
+    title="Starter Hosting"
+    price="3.37"
+    summary="Affordable 1GB hosting account for small websites."
+    color="red"
+    image={plan1Img}
+  />
+  <PricingCard
+    title="Standard Hosting"
+    price="5.99"
+    summary="Most popular for small to medium business websites."
+    color="green"
+    image={plan2Img}
+  />
+  <PricingCard
+    title="Managed Wordpress"
+    price="27.97"
+    summary="Complete hassle-free managed WordPress hosting."
+    color="blue"
+    image={plan2Img}
+  />
+</section>
+<style>
+  .pricing {
+    max-inline-size: var(--container-inline-size);
+    margin-inline: auto;
+    margin-block: var(--large-gap);
+    padding: var(--gap);
+    gap: var(--gap);
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(var(--size-13), 1fr));
+  }
+</style>

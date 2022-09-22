@@ -1,0 +1,163 @@
+---
+import feature1Icon from "@assets/images/home-choose-hostiko-icon-img-1.png";
+import feature2Icon from "@assets/images/home-choose-hostiko-icon-img-2.png";
+import feature3Icon from "@assets/images/home-choose-hostiko-icon-img-3.png";
+import feature4Icon from "@assets/images/home-choose-hostiko-icon-img-4.png";
+---
+
+<div
+  class="features-container"
+  style="--bg-color: #ebf5ff; --color: var(--clr-blue)"
+>
+  <section class="features">
+    <div class="header-wrapper">
+      <header>
+        <span class="tagline" style="--bg-color: #cedeef"
+          >HOSTING FOR YOUR PROJECT OR BUSINESS</span
+        >
+        <h2>Why Choose GopherHost?</h2>
+        <p>
+          GopherHost is a small business that really cares about their
+          customers.
+        </p>
+      </header>
+    </div>
+    <div class="articles">
+      <article
+        style="background-image: url(/assets/images/home-choose-hostiko-img-1.png)"
+      >
+        <div class="content">
+          <span class="image">
+            <img src={feature1Icon} alt="feature icon" />
+          </span>
+          <h3>Low Cost, High Performance</h3>
+          <p>Fastest Hosting accounts and incredibly affordable prices.</p>
+        </div>
+      </article>
+
+      <article
+        style="background-image: url(/assets/images/home-choose-hostiko-img-2.png)"
+      >
+        <div class="content">
+          <span class="image">
+            <img src={feature2Icon} alt="feature icon" />
+          </span>
+          <h3>Secure Network & Best Servers</h3>
+          <p>
+            Our secure network and latest high-end servers makes websites happy!
+          </p>
+        </div>
+      </article>
+      <article
+        style="background-image: url(/assets/images/home-choose-hostiko-img-3.png)"
+      >
+        <div class="content">
+          <span class="image">
+            <img src={feature3Icon} alt="feature icon" />
+          </span>
+          <h3>Free Setup & No Hidden Fees</h3>
+          <p>
+            No setup fees, not long term commitments, no contracts -- we are
+            here for you.
+          </p>
+        </div>
+      </article>
+      <article
+        style="background-image: url(/assets/images/home-choose-hostiko-img-4.png)"
+      >
+        <div class="content">
+          <span class="image">
+            <img src={feature4Icon} alt="feature icon" />
+          </span>
+          <h3>60 Day Money Back Guarantee</h3>
+          <p>
+            No questions asked money-back guarantee if you are unhappy for any
+            reason.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+<style>
+  .features {
+    text-align: center;
+    .header-wrapper {
+      background-color: var(--bg-color);
+      clip-path: ellipse(93% 100% at 50% 100%);
+    }
+
+    header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      max-inline-size: var(--container-inline-size);
+      margin-inline: auto;
+      padding: var(--gap);
+      align-items: center;
+      gap: var(--gap);
+      padding-block: var(--larger-gap);
+    }
+
+    article {
+      max-inline-size: var(--container-inline-size);
+      margin-inline: auto;
+      margin-block: var(--large-gap);
+      padding: var(--gap);
+      gap: var(--gap);
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: no-repeat top center;
+      background-size: contain;
+      aspect-ratio: 1/1.5;
+      display: grid;
+      align-items: start;
+      padding: var(--large-gap);
+      padding-top: var(--larger-gap);
+    }
+
+    article .content {
+      padding: var(--gap);
+      background-color: white;
+      border-radius: 0.5rem;
+    }
+
+    .articles {
+      display: grid;
+      gap: var(--larger-gap);
+      padding: var(--large-gap);
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
+    .image {
+      display: grid;
+      place-content: center;
+      padding: var(--gap);
+    }
+
+    header p {
+      font-size: var(--font-size-fluid-0);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-4);
+    }
+
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: var(--font-size-2);
+      font-weight: 500;
+    }
+
+    p {
+      margin-block: var(--small-gap) var(--large-gap);
+      font-size: var(--font-size-fluid-0);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-2);
+      text-align: center;
+    }
+  }
+</style>

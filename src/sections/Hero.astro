@@ -1,0 +1,103 @@
+---
+import heroImage from "@assets/images/home-banner-img.png";
+---
+
+<div class="container" style="--bg-color: #ede2eb; --color: var(--clr-orange)">
+  <section class="hero">
+    <div class="hero__text">
+      <span class="tagline">Simple, Fast, Affordable</span>
+      <h1>The Perfect Place to Host Your Website</h1>
+      <p>
+        Get your domain name and hosting and get your website online quickly and
+        easily
+      </p>
+      <form class="form-control">
+        <input type="text" placeholder="domain.com" />
+        <button>Search Domain</button>
+      </form>
+    </div>
+    <div class="hero__image">
+      <img src={heroImage} alt="hero" />
+    </div>
+  </section>
+</div>
+
+<style>
+  .container {
+    background-color: #ebf5ff;
+    clip-path: ellipse(195% 100% at 50% 0%);
+    padding-block: var(--larger-gap);
+    margin-bottom: var(--large-gap);
+  }
+
+  .hero {
+    max-inline-size: var(--container-inline-size);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    padding: var(--gap);
+    gap: var(--larger-gap);
+    flex-direction: column;
+    @media (--md-n-above) {
+      flex-direction: row;
+    }
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    text-align: center;
+    @media (min-width: 768px) {
+      display: grid;
+      place-items: start;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: var(--font-size-fluid-2);
+      margin-block-end: var(--gap);
+    }
+
+    p {
+      font-size: var(--font-size-fluid-0);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-4);
+    }
+
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: var(--small-gap);
+      gap: var(--small-gap);
+      border-radius: 0.25rem;
+      inline-size: 100%;
+      @media (--sm-n-above) {
+        flex-direction: row;
+      }
+      input {
+        inline-size: 100%;
+        font-size: var(--font-size-2);
+        padding: var(--smaller-gap);
+        outline: none;
+        border: none;
+      }
+      button {
+        cursor: pointer;
+        flex-shrink: 0;
+        background-color: var(--clr-teal);
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 1px;
+        border-radius: 0.25rem;
+        padding: var(--gap);
+        border: 1px solid white;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,28 @@
+@import "./variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: var(--primary-family);
+  overflow-x: hidden;
+}
+
+img,
+picture {
+  object-fit: cover;
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+}
+
+.tagline {
+  color: var(--color);
+  background-color: var(--bg-color);
+  font-weight: 600;
+  align-self: center;
+  padding: var(--smaller-gap) var(--small-gap);
+  font-size: var(--font-size-0);
+}

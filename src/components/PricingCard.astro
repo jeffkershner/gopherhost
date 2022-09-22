@@ -1,0 +1,24 @@
+---
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+
+export interface Props {
+  color: string;
+  title: string;
+  price: string;
+  summary: string;
+  image: string;
+}
+
+const { image, title, color, price, summary } = Astro.props as Props;
+---
+
+<Card {color}>
+  <img src={image} alt={title} />
+  <h2>{title}</h2>
+  <h3>
+    $<span class="amount">{price}</span>/Mo
+  </h3>
+  <p>{summary}</p>
+  <Button {color} href="/hosting">Learn More</Button>
+</Card>

@@ -1,0 +1,60 @@
+---
+import contactBgImg from "@assets/images/home-support-map-img.png";
+import Button from "@components/Button.astro";
+---
+
+<div
+  class="contact-container"
+  style="--bg-color: #ebf5ff; --color: var(--clr-blue)"
+>
+  <section class="contact">
+    <div class="bg"><img src={contactBgImg} /></div>
+    <span class="tagline" style="--bg-color: #cedeef">CONTACT US</span>
+    <h2>24/7/365 Support. We work when you work.</h2>
+    <p>
+      Do you have a comment, question or need support. Please contact us and we
+      will do our best to return your request in a timely fashion.
+    </p>
+    <Button color="blue">CONTACT US</Button>
+  </section>
+</div>
+<style>
+  .contact-container {
+    background-color: #ebf5ff;
+    clip-path: ellipse(195% 100% at 50% 0%);
+    padding-block: var(--large-gap) var(--larger-gap);
+    margin-bottom: var(--large-gap);
+  }
+
+  .contact {
+    max-inline-size: var(--container-inline-size);
+    margin-inline: auto;
+    padding: var(--gap);
+    gap: var(--gap);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .bg {
+    position: absolute;
+    inset: var(--larger-gap);
+    background-size: cover;
+    z-index: -1;
+  }
+
+  section h2 {
+    font-size: var(--font-size-fluid-1);
+    font-weight: 600;
+  }
+
+  section p {
+    margin-block: var(--small-gap) var(--large-gap);
+    font-size: var(--font-size-fluid-0);
+    color: var(--gray-6);
+    line-height: var(--font-lineheight-4);
+    text-align: center;
+    max-inline-size: 40rem;
+  }
+</style>

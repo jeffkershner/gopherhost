@@ -1,6 +1,6 @@
 ---
 import Button from "./Button.astro";
-import Card from "./Card.astro";
+import Card from "./Card.svelte";
 
 export interface Props {
   color: string;
@@ -14,11 +14,25 @@ const { image, title, color, price, summary } = Astro.props as Props;
 ---
 
 <Card {color}>
-  <img src={image} alt={title} />
-  <h2>{title}</h2>
-  <h3>
-    $<span class="amount">{price}</span>/Mo
-  </h3>
-  <p>{summary}</p>
-  <Button {color} href="/hosting">Learn More</Button>
+  <div class="container">
+    <img src={image} alt={title} />
+    <h2>{title}</h2>
+    <h3>
+      $<span class="amount">{price}</span>/Mo
+    </h3>
+    <p>{summary}</p>
+    <Button {color} href="/hosting">Learn More</Button>
+  </div>
 </Card>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    align-items: flex-start;
+    img {
+      margin-block-end: var(--large-gap);
+    }
+  }
+</style>

@@ -5,6 +5,7 @@ import Pricing from "@sections/Pricing.astro";
 import Features from "@sections/Feats.astro";
 import Testimonials from "@sections/Testimonials.svelte";
 import Contact from "@sections/Contact.astro";
+import News from "@sections/News.astro";
 
 import supportImg from "@assets/images/home-support-img.png";
 import supportIcon from "@assets/images/home-support-icon-img.png";
@@ -54,29 +55,10 @@ import simplyIcon from "@assets/images/home-simply-icon-img.png";
   <!-- CONTACT -->
   <Contact />
   <!-- NEWS -->
-  <section class="news" style="--bg-color: #ebf5ff; --color: var(--clr-blue)">
-    <span class="tagline" style="--bg-color: #cedeef">LATEST NEWS</span>
-    <h2>Our Company Blog</h2>
-    <p>
-      The latest articles from our company blog. Checkout what we have been up
-      to or learn more about things you can do to make your web presence better.
-    </p>
-  </section>
+  <News />
 </Layout>
 
 <style>
-  .news {
-    max-inline-size: var(--container-inline-size);
-    margin-inline: auto;
-    margin-block: var(--larger-gap);
-    padding: var(--gap);
-    gap: var(--gap);
-    display: grid;
-    text-align: center;
-    position: relative;
-    place-items: center;
-  }
-
   .usp {
     max-inline-size: var(--container-inline-size);
     margin-inline: auto;
@@ -103,22 +85,21 @@ import simplyIcon from "@assets/images/home-simply-icon-img.png";
       padding: var(--gap);
       border-radius: 9999px;
     }
-  }
-
-  section h2 {
-    font-size: var(--font-size-fluid-1);
-    font-weight: 600;
-  }
-
-  section p {
-    margin-block: var(--small-gap) var(--large-gap);
-    color: var(--gray-6);
-    font-size: var(--font-size-fluid-0);
-    line-height: var(--font-lineheight-4);
-    text-align: left;
-    @media (--sm-n-below) {
-      text-align: center;
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
     }
-    max-inline-size: 40rem;
+
+    p {
+      margin-block: var(--small-gap) var(--large-gap);
+      color: var(--gray-6);
+      font-size: var(--font-size-fluid-0);
+      line-height: var(--font-lineheight-4);
+      text-align: left;
+      @media (--sm-n-below) {
+        text-align: center;
+      }
+      max-inline-size: 40rem;
+    }
   }
 </style>

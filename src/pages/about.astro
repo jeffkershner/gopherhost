@@ -1,0 +1,82 @@
+---
+import Card from "@components/Card.svelte";
+import Layout from "@layouts/Layout.astro";
+import Feats from "@sections/Feats.astro";
+import HeroAbout from "@sections/HeroAbout.astro";
+import News from "@sections/News.astro";
+import Testimonials from "@sections/Testimonials.svelte";
+
+import missionImage from "@assets/images/about-banner-planbox-img-1.png";
+import visionImage from "@assets/images/about-banner-planbox-img-2.png";
+import Timeline from "@sections/Timeline.astro";
+import Growth from "@sections/Growth.svelte";
+---
+
+<Layout title="About - GopherHost">
+  <HeroAbout />
+  <div class="container">
+    <section class="mission">
+      <Card color="blue">
+        <div class="articles">
+          <article>
+            <img src={missionImage} />
+            <h2>Our Mission</h2>
+            <p>
+              We entered the website hosting world because we truly believed we
+              could do it better. We are proud of our quality hosting service
+              without the commission based sales representatives trying to
+              up-sell you products you don't need.
+            </p>
+          </article>
+          <div class="divider"></div>
+          <article>
+            <img src={visionImage} />
+            <h2>Our Vision</h2>
+            <p>
+              We are laser focused on continually improving our hosting
+              infrastructure to provide the most secure and fastest website
+              hosting at an affordable price. GopherHost focuses solely on
+              website hosting and domain names.
+            </p>
+          </article>
+        </div>
+      </Card>
+    </section>
+  </div>
+  <Timeline />
+  <Growth client:visible />
+  <Feats />
+  <News />
+  <Testimonials />
+</Layout>
+
+<style>
+  .container {
+    margin-inline: auto;
+    max-inline-size: var(--container-inline-size);
+    padding: var(--gap);
+  }
+
+  .articles {
+    display: flex;
+    gap: var(--larger-gap);
+    @media (--sm-n-below) {
+      flex-direction: column;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid var(--blue-3);
+    border-right: 1px solid var(--blue-3);
+    @media (--sm-n-below) {
+      display: none;
+    }
+  }
+</style>

@@ -1,15 +1,8 @@
----
-export interface Props {
-  color?: string;
-}
+<script lang="ts">
+  export let color: string = "";
+</script>
 
-const { color } = Astro.props as Props;
----
-
-<article
-  class={`card ${color ? "bordered" : ""}`}
-  style={`--color: var(--clr-${color})`}
->
+<article class:bordered={color} style:--color="var(--clr-{color})" class="card">
   <slot />
 </article>
 
@@ -19,28 +12,24 @@ const { color } = Astro.props as Props;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     padding: var(--large-gap);
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
     align-items: start;
   }
 
   .card.bordered {
     border-top: 0.3rem var(--color) solid;
   }
-</style>
-<style is:global>
+
   .card {
-    img {
+    :global(img) {
       align-self: center;
     }
 
-    h2 {
+    :global(h2) {
       font-weight: 500;
       font-size: var(--font-size-fluid-1);
     }
 
-    h3 {
+    :global(h3) {
       display: flex;
       align-items: center;
       color: var(--color);
@@ -48,20 +37,20 @@ const { color } = Astro.props as Props;
       line-height: 1.75rem;
     }
 
-    p {
-      color: var(--gray-6);
+    :global(p) {
       font-size: var(--font-size-fluid-0);
-      line-height: var(--font-lineheight-2);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-4);
     }
 
-    .amount {
+    :global(.amount) {
       font-size: var(--font-size-fluid-1);
       font-size: 1.5rem;
       line-height: 2rem;
       font-weight: 600;
     }
 
-    .btn {
+    :global(.btn) {
       cursor: pointer;
       background-color: var(--color);
       color: white;
@@ -74,7 +63,7 @@ const { color } = Astro.props as Props;
       border: 2px solid var(--color);
     }
 
-    .btn:hover {
+    :global(.btn:hover) {
       color: var(--color);
       background-color: white;
     }

@@ -1,0 +1,319 @@
+---
+import Card from "@components/Card.svelte";
+import Container from "@components/Container.svelte";
+import Layout from "@layouts/Layout.astro";
+import HeroDomains from "@sections/HeroDomains.astro";
+import Testimonials from "@sections/Testimonials.svelte";
+
+import dotComImage from "@assets/images/dot-com.png";
+import dotEuImage from "@assets/images/dot-eu.png";
+import dotNetImage from "@assets/images/dot-net.png";
+import dotUsImage from "@assets/images/dot-us.png";
+
+const cards = [
+  {
+    price: "12.10",
+    color: "purple",
+    image: dotComImage,
+  },
+  {
+    price: "14.36",
+    color: "blue",
+    image: dotNetImage,
+  },
+  {
+    price: "14.11",
+    color: "green",
+    image: dotEuImage,
+  },
+  {
+    price: "13.69",
+    color: "orange",
+    image: dotUsImage,
+  },
+];
+
+const allDomainsRegistered = [
+  {
+    tlds: ".COM",
+    years: 1,
+    register: "12.10",
+    transfer: "12.10",
+    renew: "12.10",
+  },
+  {
+    tlds: ".COM",
+    years: 1,
+    register: "12.10",
+    transfer: "12.10",
+    renew: "12.10",
+  },
+];
+---
+
+<Layout>
+  <HeroDomains />
+  <Container>
+    <section class="search">
+      <Card color="blue">
+        <div class="domains-card">
+          <form class="form-control">
+            <input type="text" placeholder="domain.com" />
+            <button>Search Domain</button>
+          </form>
+        </div>
+      </Card>
+      <ul class="names">
+        {
+          cards.map(({ color, price, image }) => (
+            <li>
+              <Card>
+                <div class="name">
+                  <img src={image} class="image" />
+                  <span
+                    class="tagline"
+                    style={`--color:var(--clr-${color});  --bg-color: transparent;`}
+                  >
+                    ${price}/year
+                  </span>
+                </div>
+              </Card>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </Container>
+  <Container bgColor="#ebf5ff" color="var(--clr-orange)" rounded="top">
+    <section class="register">
+      <span
+        class="tagline"
+        style="--bg-color: #cedeef; --color: var(--clr-blue)"
+      >
+        REGISTER OR TRANSFER
+      </span>
+      <h2>All Domains Registered with GopherHost</h2>
+      <article class="mobile-table">
+        <ul class="domains-list">
+          {
+            allDomainsRegistered.map(
+              ({ years, tlds, register, renew, transfer }) => (
+                <>
+                  <li>
+                    <span class="title">TLDs</span>
+                    <p>{tlds}</p>
+                  </li>
+                  <li>
+                    <span class="title">Years</span>
+                    <p>{years}-yrs</p>
+                  </li>
+                  <li>
+                    <span class="title">Register</span>
+                    <p>${register}</p>
+                  </li>
+                  <li>
+                    <span class="title">Transfer</span>
+                    <p>${transfer}</p>
+                  </li>
+                  <li>
+                    <span class="title">Renew</span>
+                    <p>${renew}</p>
+                  </li>
+                </>
+              )
+            )
+          }
+        </ul>
+      </article>
+      <article class="desktop-table">
+        <table>
+          <thead>
+            <tr>
+              <th>TLDs</th>
+              <th>Years</th>
+              <th>Register</th>
+              <th>Transfer</th>
+              <th>Renew</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              allDomainsRegistered.map(
+                ({ years, tlds, register, renew, transfer }) => (
+                  <tr>
+                    <td>
+                      <div class="table-card">TLDs</div>
+                      <p>{tlds}</p>
+                    </td>
+                    <td>
+                      <div class="table-card">Years</div>
+                      <p>{years}-yrs</p>
+                    </td>
+                    <td>
+                      <div class="table-card">Register</div>
+                      <p>${register}</p>
+                    </td>
+                    <td>
+                      <div class="table-card">Transfer</div>
+                      <p>${renew}</p>
+                    </td>
+                    <td>
+                      <div class="table-card">Renew</div>
+                      <p>${transfer}</p>
+                    </td>
+                  </tr>
+                )
+              )
+            }
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </Container>
+  <Testimonials />
+</Layout>
+
+<style>
+  .search {
+    transform: translateY(calc(var(--larger-gap) * -2));
+  }
+  .names {
+    max-inline-size: calc(var(--container-inline-size) - var(--larger-gap) * 3);
+    margin-inline: auto;
+    transform: translateY(calc(var(--larger-gap) * -1));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+    @media (--md-n-below) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .name {
+      gap: var(--gap);
+      display: grid;
+      place-items: center;
+      .tagline {
+        font-size: var(--font-size-3) !important;
+      }
+    }
+  }
+  .domains-card {
+    padding: var(--larger-gap);
+  }
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: var(--small-gap);
+    gap: var(--small-gap);
+    inline-size: 100%;
+    border-bottom: 1px solid var(--gray-3);
+    @media (--sm-n-above) {
+      flex-direction: row;
+    }
+    input {
+      inline-size: 100%;
+      font-size: var(--font-size-2);
+      padding: var(--smaller-gap);
+      outline: none;
+      border: none;
+    }
+    button {
+      cursor: pointer;
+      flex-shrink: 0;
+      background-color: var(--clr-teal);
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 1px;
+      border-radius: 0.25rem;
+      padding: var(--gap);
+      border: 1px solid white;
+    }
+  }
+  .register {
+    display: grid;
+    place-items: center;
+    gap: var(--large-gap);
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: var(--font-size-2);
+      font-weight: 500;
+    }
+
+    p {
+      margin-block: var(--small-gap) var(--large-gap);
+      font-size: var(--font-size-fluid-0);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-2);
+      text-align: center;
+    }
+    article {
+      inline-size: 100%;
+    }
+    .mobile-table {
+      @media (--md-n-above) {
+        display: none;
+      }
+      li {
+        border: 1px solid var(--gray-2);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        p {
+          flex-grow: 1;
+          background-color: white;
+          padding: var(--large-gap) var(--gap);
+          text-align: left;
+          margin: 0;
+        }
+        .title {
+          background-color: var(--accent-color);
+          padding: var(--large-gap) var(--gap);
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+    .desktop-table {
+      @media (--md-n-below) {
+        display: none;
+      }
+    }
+    table {
+      inline-size: 100%;
+      tr {
+        background-color: white;
+        &:is(:hover, :focus) {
+          background-color: var(--gray-1);
+        }
+      }
+      td,
+      th {
+        border: 1px solid var(--gray-3);
+        padding: var(--large-gap) var(--gap);
+      }
+      th {
+        background-color: var(--accent-color);
+        color: white;
+      }
+      td {
+        p {
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .table-card {
+        background-color: var(--accent-color);
+        border: 1px solid var(--gray-7);
+        padding: var(--large-gap) var(--gap);
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+</style>

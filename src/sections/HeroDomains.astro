@@ -1,5 +1,5 @@
 ---
-import heroImage from "@assets/images/home-testimonial-section-img.png";
+import heroImage from "@assets/images/domain-banner-img.png";
 import Container from "@components/Container.svelte";
 ---
 
@@ -9,12 +9,12 @@ import Container from "@components/Container.svelte";
       <span
         class="tagline"
         style="--bg-color: #cedeef; --color: var(--clr-blue)"
-        >LEARN MORE ABOUT GOPHERHOST</span
+        >SIMPLE DOMAIN MANAGEMENT</span
       >
-      <h1>We Help People own their Digital Presence.</h1>
+      <h1>It All Starts With A Domain Name</h1>
       <p>
-        Experience a premium website hosting experience at an affordable price
-        at GopherHost.
+        Every great website starts with a great domain name. Check to see if
+        your domain name is available.
       </p>
     </div>
     <div class="hero__image">
@@ -24,13 +24,6 @@ import Container from "@components/Container.svelte";
 </Container>
 
 <style>
-  .container {
-    background-color: #ebf5ff;
-    clip-path: ellipse(195% 100% at 50% 0%);
-    padding-block: var(--larger-gap);
-    margin-bottom: var(--large-gap);
-  }
-
   .hero {
     max-inline-size: var(--container-inline-size);
     margin-inline: auto;
@@ -69,39 +62,6 @@ import Container from "@components/Container.svelte";
       font-size: var(--font-size-fluid-0);
       color: var(--gray-6);
       line-height: var(--font-lineheight-4);
-    }
-
-    .form-control {
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      padding: var(--small-gap);
-      gap: var(--small-gap);
-      border-radius: 0.25rem;
-      inline-size: 100%;
-      @media (--sm-n-above) {
-        flex-direction: row;
-      }
-      input {
-        inline-size: 100%;
-        font-size: var(--font-size-2);
-        padding: var(--smaller-gap);
-        outline: none;
-        border: none;
-      }
-      button {
-        cursor: pointer;
-        flex-shrink: 0;
-        background-color: var(--clr-teal);
-        color: white;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        line-height: 1rem;
-        letter-spacing: 1px;
-        border-radius: 0.25rem;
-        padding: var(--gap);
-        border: 1px solid white;
-      }
     }
   }
 </style>

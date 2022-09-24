@@ -1,8 +1,9 @@
 ---
 import heroImage from "@assets/images/home-banner-img.png";
+import Container from "@components/Container.svelte";
 ---
 
-<div class="container" style="--bg-color: #ede2eb; --color: var(--clr-orange)">
+<Container bgColor="#ebf5ff" color="var(--clr-orange)" rounded="bottom">
   <section class="hero">
     <div class="hero__text">
       <span class="tagline">Simple, Fast, Affordable</span>
@@ -20,16 +21,9 @@ import heroImage from "@assets/images/home-banner-img.png";
       <img src={heroImage} alt="hero" />
     </div>
   </section>
-</div>
+</Container>
 
 <style>
-  .container {
-    background-color: #ebf5ff;
-    clip-path: ellipse(195% 100% at 50% 0%);
-    padding-block: var(--larger-gap);
-    margin-bottom: var(--large-gap);
-  }
-
   .hero {
     max-inline-size: var(--container-inline-size);
     margin-inline: auto;

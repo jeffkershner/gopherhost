@@ -1,24 +1,15 @@
 ---
-import heroImage from "@assets/images/home-testimonial-section-img.png";
 import Container from "@components/Container.svelte";
 ---
 
-<Container bgColor="#ebf5ff" color="var(--clr-orange)" rounded="bottom">
+<Container bgColor="#ebf5ff" color="var(--clr-orange)">
   <section class="hero">
     <div class="hero__text">
-      <span
-        class="tagline"
-        style="--bg-color: #cedeef; --color: var(--clr-blue)"
-        >LEARN MORE ABOUT GOPHERHOST</span
-      >
-      <h1>We Help People own their Digital Presence.</h1>
+      <h1>Welcome to our Blog</h1>
       <p>
-        Experience a premium website hosting experience at an affordable price
-        at GopherHost.
+        Read our articles about SEO, WordPress, Hosting and other website
+        related topics.
       </p>
-    </div>
-    <div class="hero__image">
-      <img src={heroImage} alt="hero" />
     </div>
   </section>
 </Container>
@@ -53,11 +44,6 @@ import Container from "@components/Container.svelte";
     align-items: center;
     gap: var(--gap);
     text-align: center;
-    @media (min-width: 768px) {
-      display: grid;
-      place-items: start;
-      text-align: left;
-    }
 
     h1 {
       font-weight: 600;

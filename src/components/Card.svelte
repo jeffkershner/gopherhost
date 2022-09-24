@@ -8,9 +8,9 @@
 
 <style>
   .card {
+    background-color: rgb(255 255 255);
     border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: var(--large-gap);
     align-items: start;
   }

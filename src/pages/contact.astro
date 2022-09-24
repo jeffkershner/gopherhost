@@ -1,0 +1,100 @@
+---
+import Button from "@components/Button.astro";
+import Card from "@components/Card.svelte";
+import Layout from "@layouts/Layout.astro";
+import HeroContact from "@sections/HeroContact.astro";
+
+import contactIcon from "@assets/images/contact-icon-2.png";
+---
+
+<Layout title="About - GopherHost">
+  <HeroContact />
+  <div class="container">
+    <section class="contact">
+      <Card color="blue">
+        <form data-netlify="true" name="contact">
+          <input placeholder="Your Name" name="name" />
+          <input placeholder="Your Email" name="email" type="email" />
+          <textarea placeholder="Your Message" name="message"></textarea>
+          <div class="actions">
+            <Button color="blue">SEND MESSAGE NOW</Button>
+          </div>
+        </form>
+      </Card>
+      <div class="support-wrapper">
+        <Card>
+          <div class="support">
+            <img src={contactIcon} alt="" />
+            <h2>Technical Support</h2>
+
+            <Button color="teal">Open Ticket</Button>
+          </div>
+        </Card>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-gap);
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      .actions {
+        display: grid;
+        place-content: center;
+      }
+    }
+    input,
+    textarea {
+      padding: var(--gap);
+      border: 1px solid var(--gray-4);
+      border-radius: 0.25rem;
+    }
+    .support-wrapper {
+      width: 100%;
+      max-inline-size: calc(
+        var(--container-inline-size) - var(--larger-gap) * 3
+      );
+      margin-inline: auto;
+    }
+    .support {
+      display: grid;
+      place-items: center;
+      gap: var(--gap);
+    }
+  }
+  .container {
+    transform: translateY(calc(var(--larger-gap) * -2));
+    margin-inline: auto;
+    max-inline-size: var(--container-inline-size);
+    padding: var(--gap);
+  }
+
+  .articles {
+    display: flex;
+    gap: var(--larger-gap);
+    @media (--sm-n-below) {
+      flex-direction: column;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid var(--blue-3);
+    border-right: 1px solid var(--blue-3);
+    @media (--sm-n-below) {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,436 @@
+---
+import cpanelImage from "@assets/images/shared-web-hosting-cpanel-img.png";
+import Card from "@components/Card.svelte";
+import Container from "@components/Container.svelte";
+import Layout from "@layouts/Layout.astro";
+import HeroHosting from "@sections/HeroHosting.astro";
+
+import planImg1 from "@assets/images/shared-banner-plan-box-img-1.png";
+import planImg2 from "@assets/images/shared-banner-plan-box-img-2.png";
+import planImg3 from "@assets/images/shared-banner-plan-box-img-3.png";
+import hostingImg1 from "@assets/images/shared-web-hosting-plan-box-img-1.png";
+import hostingImg2 from "@assets/images/shared-web-hosting-plan-box-img-2.png";
+import hostingImg3 from "@assets/images/shared-web-hosting-plan-box-img-3.png";
+import hostingImg4 from "@assets/images/shared-web-hosting-plan-box-img-4.png";
+import Icon from "@components/Icon.svelte";
+import Button from "@components/Button.astro";
+import Usp from "@sections/Usp.astro";
+import Testimonials from "@sections/Testimonials.svelte";
+import Contact from "@sections/Contact.astro";
+---
+
+<Layout>
+  <HeroHosting />
+  <Container>
+    <div class="grid">
+      <Card>
+        <div class="card">
+          <img src={planImg1} />
+          <h2>Starter Hosting</h2>
+          <ul class="checklist">
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1GB</strong> SSD Space</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="cross" />
+              </span>
+              <span class="content"><strong>1</strong> Website</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="dot" />
+              </span>
+              <span class="content"><strong>512MB</strong> Memory</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1 CPU</strong> Core</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>cPanel</strong> Access</span>
+            </li>
+          </ul>
+          <div class="price">$3.37/mo</div>
+          <span>
+            <Button color="blue">ORDER NOW</Button>
+          </span>
+        </div>
+      </Card>
+      <Card>
+        <div class="card">
+          <img src={planImg2} />
+          <h2>Standard Hosting</h2>
+          <ul class="checklist">
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1GB</strong> SSD Space</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="cross" />
+              </span>
+              <span class="content"><strong>1</strong> Website</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="dot" />
+              </span>
+              <span class="content"><strong>512MB</strong> Memory</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1 CPU</strong> Core</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>cPanel</strong> Access</span>
+            </li>
+          </ul>
+          <div class="price">$3.37/mo</div>
+          <span>
+            <Button color="blue">ORDER NOW</Button>
+          </span>
+        </div>
+      </Card>
+      <Card>
+        <div class="card">
+          <img src={planImg3} />
+          <h2>Managed Wordpress</h2>
+          <ul class="checklist">
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1GB</strong> SSD Space</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="cross" />
+              </span>
+              <span class="content"><strong>1</strong> Website</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="dot" />
+              </span>
+              <span class="content"><strong>512MB</strong> Memory</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>1 CPU</strong> Core</span>
+            </li>
+            <li>
+              <span class="icon">
+                <Icon name="check" />
+              </span>
+              <span class="content"><strong>cPanel</strong> Access</span>
+            </li>
+          </ul>
+          <div class="price">$3.37/mo</div>
+          <span>
+            <Button color="blue">ORDER NOW</Button>
+          </span>
+        </div>
+      </Card>
+    </div>
+  </Container>
+  <Container bgColor="#ebf5ff" color="var(--clr-orange)" rounded="top">
+    <section class="feats">
+      <span
+        class="tagline"
+        style="--bg-color: #cedeef; --color: var(--clr-blue)"
+      >
+        HOSTING FOR YOUR BUSINESS
+      </span>
+      <h2>Web Hosting Features</h2>
+      <div class="features-grid">
+        <Card>
+          <div class="feature-card">
+            <img src={hostingImg1} />
+            <h3>Free SSL Certificate</h3>
+            <p>
+              Free and automated SSL setup included with all hosting accounts
+            </p>
+          </div>
+        </Card>
+        <Card>
+          <div class="feature-card">
+            <img src={hostingImg2} />
+            <h3>Software Installer</h3>
+            <p>
+              Install over 200 different popular web software right inside your
+              control panel
+            </p>
+          </div>
+        </Card>
+        <Card>
+          <div class="feature-card">
+            <img src={hostingImg3} />
+            <h3>Backups</h3>
+            <p>
+              We maintain a 24 hour and a 1 week off site backup of your entire
+              hosting account
+            </p>
+          </div>
+        </Card>
+        <Card>
+          <div class="feature-card">
+            <img src={hostingImg4} />
+            <h3>LiteSpeed Server</h3>
+            <p>
+              LiteSpeed web server and LiteSpeed Cache included in all hosting
+              accounts
+            </p>
+          </div>
+        </Card>
+      </div>
+    </section>
+  </Container>
+  <Usp />
+  <Container bgColor="#ebf5ff" color="var(--clr-orange)">
+    <section class="apps">
+      <span
+        class="tagline"
+        style="--bg-color: #cedeef; --color: var(--clr-blue)"
+      >
+        INSTALL THESE APPS IN ONE-CLICK
+      </span>
+      <h2>Deploy Popular Web Software</h2>
+      <ul class="app-list">
+        {
+          Array.from(new Array(6).keys()).map((idx) => (
+            <li>
+              <Card>
+                <div class="app-card">
+                  <img src={`/assets/images/shared-app-img-${idx + 1}.png`} />
+                </div>
+              </Card>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </Container>
+
+  <Container>
+    <section class="hero">
+      <div class="hero__text">
+        <span
+          class="tagline"
+          style="--bg-color: #cedeef; --color: var(--clr-blue)"
+        >
+          ACCOUNT MANAGEMENT
+        </span>
+        <h1>Shared Web Hosting with Free cPanel</h1>
+        <p>
+          All Hosting Plans come with cPanel, to make hosting easy for everyone.
+          Setting-up addon domains, Emails, FTP and Databases is convenient with
+          our included cPanel access,
+        </p>
+      </div>
+      <div class="hero__image">
+        <img src={cpanelImage} alt="cpanel" />
+      </div>
+    </section>
+  </Container>
+
+  <style>
+    .container {
+      background-color: #ebf5ff;
+      clip-path: ellipse(195% 100% at 50% 0%);
+      padding-block: var(--larger-gap);
+      margin-bottom: var(--large-gap);
+    }
+
+    .hero {
+      max-inline-size: var(--container-inline-size);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      padding: var(--gap);
+      gap: var(--larger-gap);
+      flex-direction: column;
+      @media (--md-n-above) {
+        flex-direction: row;
+      }
+      & > * {
+        flex: 1;
+      }
+    }
+
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--gap);
+      text-align: center;
+      @media (min-width: 768px) {
+        display: grid;
+        place-items: start;
+        text-align: left;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: var(--font-size-fluid-2);
+        margin-block-end: var(--gap);
+      }
+
+      p {
+        font-size: var(--font-size-fluid-0);
+        color: var(--gray-6);
+        line-height: var(--font-lineheight-4);
+      }
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: var(--small-gap);
+        gap: var(--small-gap);
+        border-radius: 0.25rem;
+        inline-size: 100%;
+        @media (--sm-n-above) {
+          flex-direction: row;
+        }
+        input {
+          inline-size: 100%;
+          font-size: var(--font-size-2);
+          padding: var(--smaller-gap);
+          outline: none;
+          border: none;
+        }
+        button {
+          cursor: pointer;
+          flex-shrink: 0;
+          background-color: var(--clr-teal);
+          color: white;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          letter-spacing: 1px;
+          border-radius: 0.25rem;
+          padding: var(--gap);
+          border: 1px solid white;
+        }
+      }
+    }
+  </style>
+  <Contact />
+  <Testimonials />
+</Layout>
+
+<style>
+  .app-card {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+  ul.app-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    width: 100%;
+    gap: var(--large-gap);
+    justify-content: stretch;
+    li {
+      display: grid;
+    }
+  }
+  section.apps {
+    display: grid;
+    gap: var(--large-gap);
+    place-items: center;
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+  }
+  .feats {
+    display: grid;
+    gap: var(--large-gap);
+    place-items: center;
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-gap);
+    h2 {
+      text-align: center;
+    }
+  }
+  .grid {
+    transform: translateY(calc(var(--larger-gap) * -2));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--large-gap);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    inline-size: 100%;
+    gap: var(--large-gap);
+    .feature-card {
+      display: grid;
+      grid-template-rows: 1fr auto auto;
+      text-align: center;
+      justify-items: center;
+      height: 100%;
+      gap: var(--gap);
+      img {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      h3 {
+        font-weight: 600;
+      }
+      p {
+        font-size: var(--font-size-0) !important;
+      }
+    }
+  }
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+    li {
+      display: flex;
+      align-items: center;
+      gap: var(--small-gap);
+      strong {
+        font-weight: 600;
+      }
+      .content {
+        color: gray;
+      }
+    }
+  }
+  .price {
+    font-size: var(--font-size-4);
+    font-weight: 600;
+  }
+</style>

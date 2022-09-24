@@ -4,102 +4,17 @@ import Layout from "@layouts/Layout.astro";
 import Pricing from "@sections/Pricing.astro";
 import Features from "@sections/Feats.astro";
 import Testimonials from "@sections/Testimonials.svelte";
+import Usp from "@sections/Usp.astro";
 import Contact from "@sections/Contact.astro";
 import News from "@sections/News.astro";
-
-import supportImg from "@assets/images/home-support-img.png";
-import supportIcon from "@assets/images/home-support-icon-img.png";
-import simplyImg from "@assets/images/home-simply-section-img.png";
-import simplyIcon from "@assets/images/home-simply-icon-img.png";
 ---
 
 <Layout>
-  <!-- HERO -->
   <Hero />
-  <!-- PRICING -->
   <Pricing />
-  <!-- USP -->
-  <section class="usp" style="--bg-color: #fff2eb; --color: var(--clr-orange)">
-    <img src={supportImg} alt="support" />
-    <div class="content">
-      <span class="icon">
-        <img src={supportIcon} alt="support icon" />
-      </span>
-      <span class="tagline">PROFESSIONAL AND HANDS-ON</span>
-      <h2>24/7 Email Support</h2>
-      <p>
-        We have a 3 hour SLA on all support requests, 24 hours a day, 365 days a
-        year. Often times we answer support requests much faster!
-      </p>
-    </div>
-  </section>
-  <section class="usp" style="--bg-color: #eaf8f0; --color: var(--clr-green)">
-    <div class="content">
-      <span class="icon">
-        <img src={simplyIcon} alt="simply icon" />
-      </span>
-      <span class="tagline">FAST WEBSITES = HAPPY VISITORS</span>
-      <h2>Simply Fast Websites</h2>
-      <p>
-        We have the fastest and most secure shared hosting accounts available
-        today. Included in all hosting plans is LiteSpeed Web Server and
-        LiteSpeed Cache with the QUIC.cloud CDN with end-to-end http3!
-      </p>
-    </div>
-    <img src={simplyImg} alt="simply" />
-  </section>
-  <!-- FEATURES -->
+  <Usp />
   <Features />
-  <!-- TESTIMONIALS -->
   <Testimonials client:visible />
-  <!-- CONTACT -->
   <Contact />
-  <!-- NEWS -->
   <News />
 </Layout>
-
-<style>
-  .usp {
-    max-inline-size: var(--container-inline-size);
-    margin-inline: auto;
-    margin-block: var(--larger-gap);
-    padding: var(--gap);
-    gap: var(--gap);
-    display: grid;
-    text-align: center;
-    position: relative;
-    place-items: center;
-    @media (--md-n-above) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .content {
-      place-items: start;
-      @media (--md-n-below) {
-        place-items: center;
-      }
-      display: grid;
-      gap: var(--gap);
-    }
-    .icon {
-      background-color: var(--bg-color);
-      padding: var(--gap);
-      border-radius: 9999px;
-    }
-    h2 {
-      font-size: var(--font-size-fluid-1);
-      font-weight: 600;
-    }
-
-    p {
-      margin-block: var(--small-gap) var(--large-gap);
-      color: var(--gray-6);
-      font-size: var(--font-size-fluid-0);
-      line-height: var(--font-lineheight-4);
-      text-align: left;
-      @media (--sm-n-below) {
-        text-align: center;
-      }
-      max-inline-size: 40rem;
-    }
-  }
-</style>

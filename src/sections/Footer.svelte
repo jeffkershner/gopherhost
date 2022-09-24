@@ -8,41 +8,36 @@
 
 <script lang="ts">
   import logoSvg from "@assets/images/logo.svg";
-
-  const icons = {
-    check: `<svg width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9 20.42l-6.21-6.21l2.83-2.83L9 14.77l9.88-9.89l2.83 2.83L9 20.42Z"/></svg>`,
-    cross: `<svg width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z"/></svg>`,
-    dot: `<svg width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8a8 8 0 0 1-8-8a8 8 0 0 1 8-8m0 5a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/></svg>`,
-  };
+  import Icon from "@components/Icon.svelte";
 
   const websiteLinks: Link[] = [
-    { href: "/", title: "Home", icon: icons.check },
-    { href: "/about", title: "About", icon: icons.cross },
-    { href: "/blog", title: "Blog", icon: icons.dot },
-    { href: "/domains", title: "Domains", icon: icons.check },
-    { href: "/hosting", title: "Hosting", icon: icons.check },
-    { href: "/affiliates", title: "Affiliates", icon: icons.cross },
-    { href: "/terms", title: "Terms of Use", icon: icons.dot },
-    { href: "/privacy", title: "Privacy Policy", icon: icons.check },
+    { href: "/", title: "Home", icon: "check" },
+    { href: "/about", title: "About", icon: "cross" },
+    { href: "/blog", title: "Blog", icon: "dot" },
+    { href: "/domains", title: "Domains", icon: "check" },
+    { href: "/hosting", title: "Hosting", icon: "check" },
+    { href: "/affiliates", title: "Affiliates", icon: "cross" },
+    { href: "/terms", title: "Terms of Use", icon: "dot" },
+    { href: "/privacy", title: "Privacy Policy", icon: "check" },
   ];
 
   const supportLinks: Link[] = [
     {
       href: "https://account.gopherhost.com/knowledgebase",
       title: "Knowledge Base",
-      icon: icons.check,
+      icon: "check",
     },
     {
       href: "https://account.gopherhost.com/password/reset",
       title: "Forgot Password",
-      icon: icons.cross,
+      icon: "cross",
     },
     {
       href: "https://account.gopherhost.com//supporttickets.php",
       title: "Support Tickets",
-      icon: icons.dot,
+      icon: "dot",
     },
-    { href: "/contact", title: "Contact", icon: icons.check },
+    { href: "/contact", title: "Contact", icon: "check" },
   ];
 </script>
 
@@ -66,7 +61,7 @@
         {#each websiteLinks as { href, title, icon } (href)}
           <li>
             <a {href}>
-              {@html icon}
+              <Icon name={icon} />
               <span>
                 {title}
               </span>
@@ -82,7 +77,7 @@
         {#each supportLinks as { href, title, icon } (href)}
           <li>
             <a {href}>
-              {@html icon}
+              <Icon name={icon} />
               <span>
                 {title}
               </span>

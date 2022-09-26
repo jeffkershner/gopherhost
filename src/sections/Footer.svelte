@@ -94,7 +94,7 @@
             /></svg
           >
         </a>
-        <a href="https://www.facebook.com/gopherhost" aria-label="twitter">
+        <a href="https://twitter.com/thegopherhost" aria-label="twitter">
           <svg width="1em" height="1em" viewBox="0 0 24 24"
             ><path
               fill="currentColor"

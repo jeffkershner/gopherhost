@@ -6,19 +6,21 @@
   const testimonials = [
     {
       content:
-        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-      author: "John Doe",
+        "GopherHost hosts all 3 of my company's websites.  I don't even know how to login to my managed WordPress site since GopherHost handles all my updates, backups and website changes.  I highly recommend them!",
+      author: "Bryan C.",
     },
     {
-      content:
-        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-      author: "John Doe",
+      content: "My company's website was hosted at another hosting company and I was experiencing 10-15 second load times.  I met Jeff from GopherHost at an event and   he performed a website audit for me for free.  He told me what the problems were within 20 minutes.  He migrated my website to GopherHost, fixed all my issues and now my website loads in under 1 second for half the price!",
+      author: "Jessie Y.",
     },
     {
-      content:
-        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-      author: "John Doe",
+      content: "I have a small WordPress website that was at another web hosting company.  The page speed was so slow and that company kept saying I needed to upgrade to a dedicated server to fix the page loading problems.  GopherHost migrated my site for free and made a few tweaks to get my page loading in under 1 second.",
+      author: "Christy M.",
     },
+    {
+      content: "I have a single medium sized website but I needed a bunch of other domains to point to my main site.  My other hosting account wanted me to purchase 8 hosting accounts just to forward all my domains to my main site.  GopherHost migrated my website, domain, setup all my DNS and email accounts overnight with zero downtime and saved me a ton of money.  I'm never going to host anywhere else.",
+      author: "Andrew R.",
+    },    
   ];
 </script>
 

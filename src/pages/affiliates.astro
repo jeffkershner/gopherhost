@@ -1,0 +1,213 @@
+---
+import cpanelImage from "@assets/images/shared-web-hosting-cpanel-img.png";
+import Container from "@components/Container.svelte";
+import Layout from "@layouts/Layout.astro";
+import AffiliateHero from "@sections/AffiliateHero.astro";
+
+import Testimonials from "@sections/Testimonials.svelte";
+import Contact from "@sections/Contact.astro";
+---
+
+<Layout>
+  <AffiliateHero />
+
+  <Container>
+    <section class="hero">
+      <div class="hero__text">
+        <h2>Our Affiliate Program</h2>
+        <p>
+            Sign into your GopherHost account and activate your affiliate program to receive a custom link that you can give our to anyone.
+        </p>
+        <p>
+            This is a free program and can earn you money by spreading the word about how great GopherHost is.
+        </p>
+      </div>
+      <div class="hero__image">
+        <img src={cpanelImage} alt="cpanel" />
+      </div>
+    </section>
+  </Container>
+
+  <style>
+    .container {
+      background-color: #ebf5ff;
+      clip-path: ellipse(195% 100% at 50% 0%);
+      padding-block: var(--larger-gap);
+      margin-bottom: var(--large-gap);
+    }
+
+    .hero {
+      max-inline-size: var(--container-inline-size);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      padding: var(--gap);
+      gap: var(--larger-gap);
+      flex-direction: column;
+      @media (--md-n-above) {
+        flex-direction: row;
+      }
+      & > * {
+        flex: 1;
+      }
+    }
+
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--gap);
+      text-align: center;
+      @media (min-width: 768px) {
+        display: grid;
+        place-items: start;
+        text-align: left;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: var(--font-size-fluid-2);
+        margin-block-end: var(--gap);
+      }
+
+      p {
+        font-size: var(--font-size-fluid-0);
+        color: var(--gray-6);
+        line-height: var(--font-lineheight-4);
+      }
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: var(--small-gap);
+        gap: var(--small-gap);
+        border-radius: 0.25rem;
+        inline-size: 100%;
+        @media (--sm-n-above) {
+          flex-direction: row;
+        }
+        input {
+          inline-size: 100%;
+          font-size: var(--font-size-2);
+          padding: var(--smaller-gap);
+          outline: none;
+          border: none;
+        }
+        button {
+          cursor: pointer;
+          flex-shrink: 0;
+          background-color: var(--clr-teal);
+          color: white;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          letter-spacing: 1px;
+          border-radius: 0.25rem;
+          padding: var(--gap);
+          border: 1px solid white;
+        }
+      }
+    }
+  </style>
+  <Contact />
+  <Testimonials />
+</Layout>
+
+<style>
+  .app-card {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+  ul.app-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    width: 100%;
+    gap: var(--large-gap);
+    justify-content: stretch;
+    li {
+      display: grid;
+    }
+  }
+  section.apps {
+    display: grid;
+    gap: var(--large-gap);
+    place-items: center;
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+  }
+  .feats {
+    display: grid;
+    gap: var(--large-gap);
+    place-items: center;
+    h2 {
+      font-size: var(--font-size-fluid-1);
+      font-weight: 600;
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-gap);
+    h2 {
+      text-align: center;
+    }
+  }
+  .grid {
+    transform: translateY(calc(var(--larger-gap) * -2));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--large-gap);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    inline-size: 100%;
+    gap: var(--large-gap);
+    .feature-card {
+      display: grid;
+      grid-template-rows: 1fr auto auto;
+      text-align: center;
+      justify-items: center;
+      height: 100%;
+      gap: var(--gap);
+      img {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      h3 {
+        font-weight: 600;
+      }
+      p {
+        font-size: var(--font-size-0) !important;
+      }
+    }
+  }
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+    li {
+      display: flex;
+      align-items: center;
+      gap: var(--small-gap);
+      strong {
+        font-weight: 600;
+      }
+      .content {
+        color: gray;
+      }
+    }
+  }
+  .price {
+    font-size: var(--font-size-4);
+    font-weight: 600;
+  }
+</style>

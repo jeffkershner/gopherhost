@@ -29,6 +29,17 @@ const { title } = Astro.props;
 		<title>
 			{title || "GopherHost – Simple, Fast Affordable Website Hosting"}
 		</title>
+		<!-- head -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=UA-229747663-1"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "UA-229747663-1");
+		</script>
+		<!-- more head -->		
 	</head>
 	<body>
 		<Banner />

@@ -1,0 +1,107 @@
+---
+import heroImage from "@assets/images/reseller-banner-img.png";
+import Container from "@components/Container.svelte";
+---
+
+<Container bgColor="#ebf5ff" color="var(--clr-orange)" rounded="bottom">
+  <section class="hero">
+    <div class="hero__text">
+      <span
+        class="tagline"
+        style="--bg-color: #cedeef; --color: var(--clr-blue)"
+      >
+        EARN MONEY WITH GOPHERHOST
+      </span>
+      <h1>Our Affiliate Program</h1>
+      <p>
+        GopherHost is proud to announce the launching of its affiliate program.  Signing up your friends and family with your custom affiliate link will earn you cash!
+      </p>
+    </div>
+    <div class="hero__image">
+      <img src={heroImage} alt="hero" />
+    </div>
+  </section>
+</Container>
+
+<style>
+  .container {
+    background-color: #ebf5ff;
+    clip-path: ellipse(195% 100% at 50% 0%);
+    padding-block: var(--larger-gap);
+    margin-bottom: var(--large-gap);
+  }
+
+  .hero {
+    max-inline-size: var(--container-inline-size);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    padding: var(--gap);
+    gap: var(--larger-gap);
+    flex-direction: column;
+    @media (--md-n-above) {
+      flex-direction: row;
+    }
+    & > * {
+      flex: 1;
+    }
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    text-align: center;
+    @media (min-width: 768px) {
+      display: grid;
+      place-items: start;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: var(--font-size-fluid-2);
+      margin-block-end: var(--gap);
+    }
+
+    p {
+      font-size: var(--font-size-fluid-0);
+      color: var(--gray-6);
+      line-height: var(--font-lineheight-4);
+    }
+
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: var(--small-gap);
+      gap: var(--small-gap);
+      border-radius: 0.25rem;
+      inline-size: 100%;
+      @media (--sm-n-above) {
+        flex-direction: row;
+      }
+      input {
+        inline-size: 100%;
+        font-size: var(--font-size-2);
+        padding: var(--smaller-gap);
+        outline: none;
+        border: none;
+      }
+      button {
+        cursor: pointer;
+        flex-shrink: 0;
+        background-color: var(--clr-teal);
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 1px;
+        border-radius: 0.25rem;
+        padding: var(--gap);
+        border: 1px solid white;
+      }
+    }
+  }
+</style>

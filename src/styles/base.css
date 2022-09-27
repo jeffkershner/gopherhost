@@ -26,3 +26,7 @@ picture {
   padding: var(--smaller-gap) var(--small-gap);
   font-size: var(--font-size-0);
 }
+
+strong {
+  font-weight: 700;
+}

@@ -12,8 +12,12 @@ import Container from "@components/Container.svelte";
         Get your domain name and hosting and get your website online quickly and
         easily
       </p>
-      <form class="form-control">
-        <input type="text" placeholder="domain.com" />
+      <form
+        class="form-control"
+        action="https://account.gopherhost.com/cart.php?a=add&domain=register"
+        method="post"
+      >
+        <input type="text" placeholder="domain.com" name="query" size="20" />
         <button>Search Domain</button>
       </form>
     </div>
